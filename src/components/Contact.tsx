@@ -7,6 +7,7 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [website, setWebsite] = useState(''); // honeypot
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const [showToast, setShowToast] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
@@ -39,6 +40,7 @@ export default function Contact() {
           name: name.trim(),
           email: email.trim(),
           message: message.trim(),
+          website, // honeypot
         }),
       });
       if (!res.ok) throw new Error('Failed');
@@ -106,22 +108,43 @@ export default function Contact() {
               Whether you&apos;re a research institution, conservation organization, or technology partner — we&apos;d love to hear from you.
             </p>
 
-            <div className="flex flex-col gap-[12px] pt-[16px]">
-              <a href="mailto:info@finklab.eu" className="font-[family-name:var(--font-rubik)] text-[15px] text-[rgba(255,255,255,0.5)] hover:text-white transition-colors">
-                info@finklab.eu
-              </a>
-              <a href="https://www.linkedin.com/company/finklab" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[15px] text-[rgba(255,255,255,0.5)] hover:text-white transition-colors">
-                LinkedIn
-              </a>
-              <a href="https://www.instagram.com/finkcommunity/" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[15px] text-[rgba(255,255,255,0.5)] hover:text-white transition-colors">
-                Instagram
-              </a>
+            <div className="flex flex-col gap-[8px] pt-[16px]">
+              <div className="flex flex-col gap-[4px]">
+                <span className="font-[family-name:var(--font-rubik)] text-[12px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.25)]">General inquiries</span>
+                <a href="mailto:info@finklab.eu" className="font-[family-name:var(--font-rubik)] text-[15px] text-[#85F18F] hover:text-white transition-colors">
+                  info@finklab.eu
+                </a>
+              </div>
+              <div className="flex flex-col gap-[4px]">
+                <span className="font-[family-name:var(--font-rubik)] text-[12px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.25)]">Press</span>
+                <a href="mailto:press@finklab.eu" className="font-[family-name:var(--font-rubik)] text-[15px] text-[#85F18F] hover:text-white transition-colors">
+                  press@finklab.eu
+                </a>
+              </div>
+              <div className="flex gap-[16px] pt-[8px]">
+                <a href="https://www.linkedin.com/company/finklab" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[14px] text-[rgba(255,255,255,0.4)] hover:text-white transition-colors">
+                  LinkedIn
+                </a>
+                <a href="https://www.instagram.com/finkcommunity/" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[14px] text-[rgba(255,255,255,0.4)] hover:text-white transition-colors">
+                  Instagram
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Right — form */}
           <div className="flex-1 max-w-[520px]">
             <form onSubmit={handleSubmit} className="glass-card rounded-[32px] p-[32px] md:p-[40px] flex flex-col gap-[16px]">
+              {/* Honeypot — invisible to humans, catches bots */}
+              <input
+                type="text"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0 }}
+              />
               <input
                 type="text"
                 value={name}

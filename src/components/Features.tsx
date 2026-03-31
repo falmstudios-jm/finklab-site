@@ -3,23 +3,23 @@
 const FEATURES = [
   {
     number: '01',
-    title: 'Fink Platform',
+    title: 'The Living Map',
     description:
-      'A citizen science platform designed for scale. Birders record sightings, track species, and contribute to the largest structured observation dataset in Europe.',
+      'Many individual observations become one living, usable map — for users, community, and science. What was previously scattered across notebooks and chat histories becomes visible, connected, and documented.',
     accent: '#85F18F',
   },
   {
     number: '02',
-    title: 'Research-Grade Data',
+    title: 'Validated Data Pipeline',
     description:
-      'Every observation is validated, enriched with metadata, and formatted for direct integration into research workflows. No cleaning required.',
+      'Every observation is trust-scored, enriched with stay duration and spatial metadata, then formatted for direct research integration. Not raw dumps — structured, reliable datasets.',
     accent: '#00D4FF',
   },
   {
     number: '03',
-    title: 'Species Intelligence',
+    title: 'Retention by Design',
     description:
-      'State-of-the-art identification systems, rarity scoring, and temporal pattern analysis. Smart algorithms that learn from millions of observations.',
+      'The live moment, the collecting instinct, the curiosity trigger. Users open the app because something could be happening right now. Every sighting feeds the map — and the map feeds engagement.',
     accent: '#CDFF5B',
   },
 ];

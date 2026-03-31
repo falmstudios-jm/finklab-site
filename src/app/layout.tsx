@@ -18,14 +18,17 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: 'finklab — Data infrastructure for biodiversity',
+  title: 'finklab — The living map of the bird world',
   description:
-    'finklab builds the data infrastructure that turns citizen bird observations into research-grade datasets. 894 species. Millions of data points. One platform.',
+    'finklab makes birdwatching visible, social, and modern. We build the platform where individual observations become a living, usable map — for birders, communities, and conservation science. 894 species. Trust-scored data. Research-grade.',
   metadataBase: new URL('https://finklab.eu'),
+  alternates: {
+    canonical: 'https://finklab.eu',
+  },
   openGraph: {
-    title: 'finklab — Data infrastructure for biodiversity',
+    title: 'finklab — The living map of the bird world',
     description:
-      'We turn biodiversity into data. Research-grade datasets from citizen science observations.',
+      'Making birdwatching visible, social, and modern. Individual observations become a living map — for birders, communities, and science.',
     url: 'https://finklab.eu',
     siteName: 'finklab',
     locale: 'en_US',
@@ -33,22 +36,29 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'finklab — Data infrastructure for biodiversity',
+    title: 'finklab — The living map of the bird world',
     description:
-      'We turn biodiversity into data. Research-grade datasets from citizen science observations.',
+      'Making birdwatching visible, social, and modern. Individual observations become a living map — for birders, communities, and science.',
   },
-  authors: [{ name: 'finklab GmbH' }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  authors: [{ name: 'finklab GmbH', url: 'https://finklab.eu' }],
   creator: 'finklab GmbH',
   publisher: 'finklab GmbH',
   keywords: [
-    'biodiversity data',
-    'citizen science',
-    'bird data',
-    'conservation technology',
-    'research data',
-    'species intelligence',
-    'finklab',
-    'ornithology data',
+    'biodiversity data', 'citizen science', 'bird observation platform',
+    'conservation technology', 'research-grade data', 'birdwatching app',
+    'finklab', 'Helgoland', 'species detection', 'trust-scored observations',
+    'live bird map', 'ornithology', 'Vogelbeobachtung', 'bird data API',
   ],
 };
 

@@ -49,16 +49,15 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="font-[family-name:var(--font-zain)] font-bold text-[48px] md:text-[80px] lg:text-[96px] leading-[0.95em] tracking-[-0.02em] text-white">
-            We turn
+            The living map
             <br />
-            <span className="gradient-text">biodiversity</span>
-            <br />
-            into data.
+            of the{' '}
+            <span className="gradient-text">bird world.</span>
           </h1>
 
           {/* Subtitle */}
           <p className="font-[family-name:var(--font-rubik)] text-[17px] md:text-[20px] leading-[1.6] text-[rgba(255,255,255,0.5)] max-w-[480px]">
-            finklab builds the infrastructure that turns citizen bird observations into research-grade datasets — structured, validated, and ready for science.
+            finklab makes birdwatching visible, social, and modern. We build the platform where individual observations become a living, usable map — for birders, communities, and science.
           </p>
 
           {/* Stats */}

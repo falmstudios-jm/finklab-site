@@ -1,13 +1,12 @@
 'use client';
 
-import BirdConstellation from './BirdConstellation';
 import SpeciesTicker from './SpeciesTicker';
 
 const DIFFERENTIATORS = [
   {
     title: 'Stay Duration Tracking',
     description:
-      'We measure how long individual birds remain at a location — not just binary sightings. This temporal depth unlocks migration timing, habitat preference, and behavioral pattern analysis.',
+      'We measure how long individual birds remain at a location — not just whether they were seen. This temporal depth unlocks migration timing, habitat preference, and behavioral patterns that point-in-time sightings simply cannot provide.',
     color: '#85F18F',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -19,7 +18,7 @@ const DIFFERENTIATORS = [
   {
     title: 'Trust-Scored Observations',
     description:
-      'Every observer has a trust factor calculated by advanced algorithms based on activity, accuracy, and reputation. Filter data by quality to match your research requirements.',
+      'Every observer earns a trust factor calculated by advanced algorithms based on activity, accuracy, and community reputation. Researchers can filter datasets by quality threshold — no more noise, no more guessing.',
     color: '#00D4FF',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -28,13 +27,14 @@ const DIFFERENTIATORS = [
     ),
   },
   {
-    title: 'Research-Ready Formats',
+    title: 'Deduplicated Living Map',
     description:
-      'Standardized data schemas designed for direct integration into research workflows. Temporal coverage, spatial resolution, and species metadata — structured and documented.',
+      'One shared real-time map replaces thousands of isolated reports. Observations that previously lived in notebooks and chat histories are now consolidated — reducing duplicate sightings and creating a single source of truth.',
     color: '#CDFF5B',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M4 7V4h16v3M9 20h6M12 4v16" stroke="#CDFF5B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#CDFF5B" strokeWidth="1.5" />
+        <circle cx="12" cy="10" r="3" stroke="#CDFF5B" strokeWidth="1.5" />
       </svg>
     ),
   },
@@ -52,57 +52,44 @@ export default function DataSection() {
             Data & Research
           </span>
           <h2 className="font-[family-name:var(--font-zain)] font-bold text-[36px] md:text-[56px] leading-[1em] tracking-[-0.02em] text-white">
-            Data infrastructure for
-            <br />
-            <span className="gradient-text">conservation science.</span>
+            Visible for science.
           </h2>
           <p className="font-[family-name:var(--font-rubik)] text-[17px] md:text-[20px] leading-[1.6] text-[rgba(255,255,255,0.45)] pt-[8px]">
-            Not another citizen science dump. finklab data is validated, enriched, and formatted — ready for the research that matters.
+            Many individual observations together yield valuable data for conservation and research. finklab data is validated, trust-scored, and structured — not another raw dump, but research-grade datasets ready for integration.
           </p>
         </div>
 
-        {/* Differentiator cards */}
-        <div className="flex flex-col gap-[16px] mb-[64px]">
-          {DIFFERENTIATORS.map((diff) => (
-            <div
-              key={diff.title}
-              className="glass-card rounded-[24px] p-[28px] md:p-[36px] flex flex-col md:flex-row gap-[20px] md:gap-[32px] items-start transition-all duration-300 group"
-            >
-              {/* Icon + title */}
-              <div className="flex items-center gap-[14px] md:w-[300px] shrink-0">
+        {/* Differentiator cards + ticker side by side on desktop */}
+        <div className="flex flex-col lg:flex-row gap-[24px]">
+          {/* Cards column */}
+          <div className="flex flex-col gap-[16px] flex-1">
+            {DIFFERENTIATORS.map((diff) => (
+              <div
+                key={diff.title}
+                className="glass-card rounded-[24px] p-[28px] md:p-[32px] flex gap-[16px] items-start transition-all duration-300 group"
+              >
                 <div
-                  className="w-[44px] h-[44px] rounded-[14px] flex items-center justify-center shrink-0 transition-colors duration-300"
+                  className="w-[44px] h-[44px] rounded-[14px] flex items-center justify-center shrink-0"
                   style={{ backgroundColor: `${diff.color}10` }}
                 >
                   {diff.icon}
                 </div>
-                <h3 className="font-[family-name:var(--font-zain)] font-bold text-[20px] md:text-[24px] leading-[1.1em] text-white">
-                  {diff.title}
-                </h3>
+                <div className="flex flex-col gap-[8px] min-w-0">
+                  <h3 className="font-[family-name:var(--font-zain)] font-bold text-[20px] md:text-[22px] leading-[1.1em] text-white">
+                    {diff.title}
+                  </h3>
+                  <p className="font-[family-name:var(--font-rubik)] text-[15px] leading-[1.6] text-[rgba(255,255,255,0.4)]">
+                    {diff.description}
+                  </p>
+                </div>
               </div>
-
-              {/* Description */}
-              <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[16px] leading-[1.7] text-[rgba(255,255,255,0.45)] flex-1">
-                {diff.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Constellation + Ticker row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px]">
-          {/* Bird constellation visualization */}
-          <div className="glass-card rounded-[24px] overflow-hidden h-[360px] relative">
-            <div className="absolute top-[20px] left-[24px] z-10">
-              <span className="font-mono text-[11px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.25)]">
-                Species network graph
-              </span>
-            </div>
-            <BirdConstellation className="w-full h-full" />
+            ))}
           </div>
 
           {/* Live species ticker */}
-          <SpeciesTicker />
+          <div className="lg:w-[360px] shrink-0">
+            <SpeciesTicker />
+          </div>
         </div>
 
         {/* Sample data schema */}
@@ -114,7 +101,7 @@ export default function DataSection() {
               <div className="w-[10px] h-[10px] rounded-full bg-[rgba(255,255,255,0.1)]" />
             </div>
             <span className="font-mono text-[12px] text-[rgba(255,255,255,0.25)] ml-[8px]">
-              observation_schema.json
+              observation_record.json
             </span>
           </div>
           <pre className="p-[24px] md:p-[32px] font-mono text-[13px] md:text-[14px] leading-[1.8] text-[rgba(255,255,255,0.5)] overflow-x-auto">

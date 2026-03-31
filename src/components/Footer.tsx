@@ -24,7 +24,7 @@ Email: info@finklab.eu
 
 Shareholders:
 falm Group GmbH (50%)
-Tewis GmbH (50%)
+TeBM GmbH (50%)
 
 Trademark Notice:
 fink® is a registered trademark of falm Group GmbH in the European Union, licensed to finklab GmbH.
