@@ -9,7 +9,7 @@ interface BirdGlobeProps {
 const MAX_BIRDS = 500;
 const ROTATE_SPEED = 0.0012;
 const INITIAL_TILT = 0.35;
-const GLOBE_SIZE = 0.43;
+const GLOBE_SIZE = 0.46;
 const BIRD_SIZE = 0.095;
 const SPRITE_RES = 96;
 

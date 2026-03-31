@@ -16,10 +16,32 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row md:items-center">
-      {/* Desktop: Globe positioned right side, behind text */}
-      <div className="hidden md:block absolute inset-0 globe-mask pointer-events-none">
-        <div className="absolute right-0 top-0 w-[65%] h-full">
+      {/* Desktop: Globe — large quarter-view, bottom-right, fading out */}
+      <div className="hidden md:block absolute inset-0 pointer-events-none" style={{ overflow: 'visible' }}>
+        <div
+          className="absolute"
+          style={{
+            right: '-25%',
+            bottom: '-35%',
+            width: '95%',
+            height: '140%',
+          }}
+        >
           <BirdGlobe />
+          {/* Bottom fade gradient */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to top, #0A0F1A 0%, #0A0F1A 8%, transparent 35%)',
+            }}
+          />
+          {/* Right edge fade */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to left, #0A0F1A 0%, transparent 15%)',
+            }}
+          />
         </div>
       </div>
 
