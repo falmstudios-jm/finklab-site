@@ -18,17 +18,22 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: 'finklab — The living map of the bird world',
+  title: 'finklab — Data-driven biodiversity infrastructure',
   description:
-    'finklab makes birdwatching visible, social, and modern. We build the platform where individual observations become a living, usable map — for birders, communities, and conservation science. 894 species. Trust-scored data. Research-grade.',
+    'finklab builds data infrastructure for biodiversity. Trust-scored observations, research-grade datasets, and the fink platform — from Helgoland, Germany.',
   metadataBase: new URL('https://finklab.eu'),
   alternates: {
     canonical: 'https://finklab.eu',
   },
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
-    title: 'finklab — The living map of the bird world',
+    title: 'finklab — Data-driven biodiversity infrastructure',
     description:
-      'Making birdwatching visible, social, and modern. Individual observations become a living map — for birders, communities, and science.',
+      'Trust-scored observations, research-grade datasets, and the fink platform — from Helgoland.',
     url: 'https://finklab.eu',
     siteName: 'finklab',
     locale: 'en_US',
@@ -36,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'finklab — The living map of the bird world',
+    title: 'finklab — Data-driven biodiversity infrastructure',
     description:
-      'Making birdwatching visible, social, and modern. Individual observations become a living map — for birders, communities, and science.',
+      'Trust-scored observations, research-grade datasets, and the fink platform — from Helgoland.',
   },
   robots: {
     index: true,
@@ -55,10 +60,10 @@ export const metadata: Metadata = {
   creator: 'finklab GmbH',
   publisher: 'finklab GmbH',
   keywords: [
-    'biodiversity data', 'citizen science', 'bird observation platform',
-    'conservation technology', 'research-grade data', 'birdwatching app',
-    'finklab', 'Helgoland', 'species detection', 'trust-scored observations',
-    'live bird map', 'ornithology', 'Vogelbeobachtung', 'bird data API',
+    'biodiversity data', 'data science', 'citizen science', 'bird observation',
+    'conservation technology', 'research-grade data', 'data-driven',
+    'finklab', 'fink', 'Helgoland', 'trust-scored observations',
+    'ornithology', 'Vogelbeobachtung', 'bird data infrastructure',
   ],
 };
 
@@ -94,7 +99,7 @@ export default function RootLayout({
               url: 'https://finklab.eu',
               logo: 'https://finklab.eu/images/finklab_bright.png',
               description:
-                'Data infrastructure for biodiversity. Turning citizen bird observations into research-grade datasets.',
+                'Data-driven biodiversity infrastructure. Trust-scored observations and research-grade datasets from Helgoland, Germany.',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Helgoland',
