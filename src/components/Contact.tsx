@@ -32,15 +32,13 @@ export default function Contact() {
 
     setStatus('sending');
     try {
-      // Send to a mailto link or API endpoint
-      const res = await fetch('https://formspree.io/f/placeholder', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: name.trim(),
           email: email.trim(),
           message: message.trim(),
-          _subject: `finklab.eu contact from ${name.trim()}`,
         }),
       });
       if (!res.ok) throw new Error('Failed');
