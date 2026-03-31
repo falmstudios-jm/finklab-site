@@ -53,17 +53,21 @@ export default function AppShowcase() {
         <div className="glass-card rounded-[32px] p-[40px] md:p-[56px] flex flex-col lg:flex-row gap-[48px] lg:gap-[64px] items-center">
           {/* Left text */}
           <div className="flex flex-col gap-[24px] flex-1 min-w-0">
-            <div className="flex items-center gap-[12px] flex-wrap">
+            <div className="flex items-center gap-[16px] flex-wrap">
+              <Image
+                src="/images/fink-app-icon.png"
+                alt="Fink App"
+                width={120}
+                height={120}
+                className="w-[56px] h-[56px] md:w-[72px] md:h-[72px] rounded-[16px] md:rounded-[20px]"
+              />
               <Image
                 src="/images/fink-logo.svg"
                 alt="Fink"
-                width={40}
-                height={40}
-                className="w-[36px] h-[36px]"
+                width={684}
+                height={297}
+                className="h-[40px] md:h-[56px] w-auto"
               />
-              <h3 className="font-[family-name:var(--font-zain)] font-bold text-[32px] md:text-[40px] leading-[1em] text-white">
-                Fink App
-              </h3>
               <span className="inline-flex items-center gap-[6px] px-[12px] py-[5px] rounded-bl-[12px] rounded-br-[12px] rounded-tr-[12px] bg-[#85F18F] font-[family-name:var(--font-rubik)] text-[12px] font-medium text-[#101D2F] tracking-[0.3px]">
                 Coming soon
               </span>
