@@ -15,17 +15,17 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Globe — positioned to show bottom-right quarter */}
-      <div className="absolute inset-0 globe-mask pointer-events-none">
-        <div className="absolute -right-[20%] -bottom-[20%] w-[110%] h-[110%] md:w-[80%] md:h-[120%] md:right-[-15%] md:bottom-[-25%]">
+    <section className="relative min-h-screen flex flex-col md:flex-row md:items-center">
+      {/* Desktop: Globe positioned bottom-right quarter, behind text */}
+      <div className="hidden md:block absolute inset-0 globe-mask pointer-events-none overflow-visible">
+        <div className="absolute -right-[15%] -bottom-[25%] w-[80%] h-[120%]">
           <BirdGlobe />
         </div>
       </div>
 
-      {/* Gradient overlay for depth */}
+      {/* Gradient overlay for text readability — desktop only */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="hidden md:block absolute inset-0 pointer-events-none"
         style={{
           background:
             'radial-gradient(ellipse 60% 70% at 20% 50%, rgba(10,15,26,0.95) 0%, rgba(10,15,26,0.4) 60%, transparent 100%)',
@@ -33,7 +33,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-[1200px] px-6 md:px-12 py-32 md:py-0 w-full">
+      <div className="relative z-10 mx-auto max-w-[1200px] px-6 md:px-12 pt-[120px] md:pt-0 md:py-0 w-full">
         <div
           ref={textRef}
           className="max-w-[640px] flex flex-col gap-[24px] md:gap-[32px] transition-all duration-1000 ease-out"
@@ -98,8 +98,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-[32px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-[8px] animate-bounce">
+      {/* Mobile: Globe below text, centered, full width */}
+      <div className="md:hidden relative w-full mt-[32px] pb-[24px]" style={{ height: '50vh', minHeight: 320 }}>
+        <BirdGlobe />
+      </div>
+
+      {/* Scroll indicator — desktop only */}
+      <div className="hidden md:flex absolute bottom-[32px] left-1/2 -translate-x-1/2 flex-col items-center gap-[8px] animate-bounce">
         <div className="w-[1px] h-[40px] bg-gradient-to-b from-transparent to-[rgba(255,255,255,0.2)]" />
       </div>
     </section>
