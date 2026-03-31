@@ -34,9 +34,9 @@ export default function Header() {
           <Image
             src="/images/finklab_bright.png"
             alt="finklab"
-            width={280}
-            height={80}
-            className="h-[56px] w-auto"
+            width={320}
+            height={90}
+            className="h-[64px] w-auto"
             priority
           />
         </a>

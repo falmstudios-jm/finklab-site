@@ -139,7 +139,7 @@ export default function Footer() {
                 alt="finklab"
                 width={140}
                 height={48}
-                className="h-[36px] w-auto"
+                className="h-[48px] w-auto"
               />
             </div>
             <div className="flex items-center gap-[24px]">

@@ -39,14 +39,6 @@ export default function Hero() {
           className="max-w-[640px] flex flex-col gap-[24px] md:gap-[32px] transition-all duration-1000 ease-out"
           style={{ opacity: 0, transform: 'translateY(30px)' }}
         >
-          {/* Eyebrow */}
-          <div className="flex items-center gap-[10px]">
-            <div className="w-[8px] h-[8px] rounded-full bg-[#85F18F] animate-pulse" />
-            <span className="font-[family-name:var(--font-rubik)] text-[13px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.4)]">
-              Helgoland, Germany
-            </span>
-          </div>
-
           {/* Headline */}
           <h1 className="font-[family-name:var(--font-zain)] font-bold text-[48px] md:text-[80px] lg:text-[96px] leading-[0.95em] tracking-[-0.02em] text-white">
             The living map
