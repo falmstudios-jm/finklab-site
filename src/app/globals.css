@@ -65,6 +65,45 @@ body {
   border-color: rgba(133, 241, 143, 0.15);
 }
 
+/* Cloud drift animation */
+@keyframes cloud-drift {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100vw); }
+}
+
+/* Float layers for phone mockup parallax (12 staggered) */
+.float-layer-1 { animation: float-gentle 6s ease-in-out infinite; }
+.float-layer-2 { animation: float-gentle 6.5s ease-in-out infinite 0.3s; }
+.float-layer-3 { animation: float-gentle 7s ease-in-out infinite 0.6s; }
+.float-layer-4 { animation: float-gentle 7.5s ease-in-out infinite 0.9s; }
+.float-layer-5 { animation: float-gentle 6.2s ease-in-out infinite 1.2s; }
+.float-layer-6 { animation: float-gentle 6.8s ease-in-out infinite 1.5s; }
+.float-layer-7 { animation: float-gentle 7.2s ease-in-out infinite 1.8s; }
+.float-layer-8 { animation: float-gentle 6.4s ease-in-out infinite 2.1s; }
+.float-layer-9 { animation: float-gentle 7.6s ease-in-out infinite 2.4s; }
+.float-layer-10 { animation: float-gentle 8s ease-in-out infinite 2.7s; }
+.float-layer-11 { animation: float-gentle 8.2s ease-in-out infinite 3s; }
+.float-layer-12 { animation: float-gentle 8.5s ease-in-out infinite 3.3s; }
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Scrollbar hide for carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Body no-scroll (for modals) */
+body.overflow-hidden {
+  overflow: hidden;
+}
+
 /* Globe fade mask */
 .globe-mask {
   mask-image: radial-gradient(ellipse 80% 80% at 70% 60%, black 20%, transparent 70%);
