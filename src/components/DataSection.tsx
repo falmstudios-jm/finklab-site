@@ -52,7 +52,7 @@ export default function DataSection() {
             Visible for{' '}
             <span className="gradient-text">science.</span>
           </h2>
-          <p className="font-[family-name:var(--font-rubik)] text-[17px] leading-[1.6] text-[rgba(255,255,255,0.45)]">
+          <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.6] text-[rgba(255,255,255,0.45)]">
             Validated, trust-scored, and structured — research-grade datasets ready for direct integration.
           </p>
         </div>
@@ -70,10 +70,10 @@ export default function DataSection() {
               >
                 {diff.icon}
               </div>
-              <h3 className="font-[family-name:var(--font-zain)] font-bold text-[22px] leading-[1.1em] text-white">
+              <h3 className="font-[family-name:var(--font-zain)] font-bold text-[22px] md:text-[28px] leading-[1.1em] text-white">
                 {diff.title}
               </h3>
-              <p className="font-[family-name:var(--font-rubik)] text-[15px] leading-[1.6] text-[rgba(255,255,255,0.4)]">
+              <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.6] text-[rgba(255,255,255,0.4)]">
                 {diff.description}
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function DataSection() {
               <div className="w-[10px] h-[10px] rounded-full bg-[rgba(255,255,255,0.1)]" />
               <div className="w-[10px] h-[10px] rounded-full bg-[rgba(255,255,255,0.1)]" />
             </div>
-            <span className="font-mono text-[12px] text-[rgba(255,255,255,0.25)] ml-[8px]">
+            <span className="font-mono text-[13px] text-[rgba(255,255,255,0.25)] ml-[8px]">
               observation_record.json
             </span>
           </div>

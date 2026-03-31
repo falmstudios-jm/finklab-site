@@ -16,9 +16,9 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row md:items-center">
-      {/* Desktop: Globe positioned bottom-right quarter, behind text */}
-      <div className="hidden md:block absolute inset-0 globe-mask pointer-events-none overflow-visible">
-        <div className="absolute -right-[15%] -bottom-[25%] w-[80%] h-[120%]">
+      {/* Desktop: Globe positioned right side, behind text */}
+      <div className="hidden md:block absolute inset-0 globe-mask pointer-events-none">
+        <div className="absolute right-0 top-0 w-[65%] h-full">
           <BirdGlobe />
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="font-[family-name:var(--font-rubik)] text-[17px] md:text-[20px] leading-[1.6] text-[rgba(255,255,255,0.5)] max-w-[480px]">
+          <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.6] text-[rgba(255,255,255,0.5)] max-w-[480px]">
             finklab makes birdwatching visible, social, and modern. We build the platform where individual observations become a living, usable map — for birders, communities, and science.
           </p>
 

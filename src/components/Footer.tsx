@@ -143,13 +143,13 @@ export default function Footer() {
               />
             </div>
             <div className="flex items-center gap-[24px]">
-              <a href="https://www.finkapp.eu" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[14px] text-[rgba(255,255,255,0.35)] hover:text-white transition-colors">
+              <a href="https://www.finkapp.eu" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[13px] text-[rgba(255,255,255,0.35)] hover:text-white transition-colors">
                 finkapp.eu
               </a>
-              <a href="https://www.linkedin.com/company/finklab" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[14px] text-[rgba(255,255,255,0.35)] hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/finklab" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[13px] text-[rgba(255,255,255,0.35)] hover:text-white transition-colors">
                 LinkedIn
               </a>
-              <a href="https://www.instagram.com/finkcommunity/" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[14px] text-[rgba(255,255,255,0.35)] hover:text-white transition-colors">
+              <a href="https://www.instagram.com/finkcommunity/" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[13px] text-[rgba(255,255,255,0.35)] hover:text-white transition-colors">
                 Instagram
               </a>
             </div>

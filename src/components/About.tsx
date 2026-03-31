@@ -13,10 +13,10 @@ export default function About() {
           <h2 className="font-[family-name:var(--font-zain)] font-bold text-[36px] md:text-[48px] leading-[1em] tracking-[-0.02em] text-white mt-[16px] mb-[24px]">
             Built on Helgoland.
           </h2>
-          <p className="font-[family-name:var(--font-rubik)] text-[17px] leading-[1.7] text-[rgba(255,255,255,0.5)] mb-[16px]">
+          <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.7] text-[rgba(255,255,255,0.5)] mb-[16px]">
             Founded on one of Europe&apos;s most important bird migration hotspots. Partnered with world-class UI/UX designers and engineers to build what the birding world has been missing.
           </p>
-          <p className="font-[family-name:var(--font-rubik)] text-[17px] leading-[1.7] text-[rgba(255,255,255,0.5)]">
+          <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.7] text-[rgba(255,255,255,0.5)]">
             Jointly owned by TeBM GmbH and falm Group GmbH. We don&apos;t change birding — we make what people already do better.
           </p>
         </div>

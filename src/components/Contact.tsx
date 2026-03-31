@@ -55,7 +55,7 @@ export default function Contact() {
   }
 
   const inputBase = (field: string) =>
-    `w-full h-[56px] px-[20px] rounded-[40px] border-2 bg-transparent font-[family-name:var(--font-rubik)] text-[17px] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:outline-none transition-colors ${
+    `w-full h-[56px] px-[20px] rounded-[40px] border-2 bg-transparent font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:outline-none transition-colors ${
       focusedField === field
         ? 'border-[#00D4FF]'
         : 'border-[rgba(255,255,255,0.1)]'
@@ -104,28 +104,28 @@ export default function Contact() {
               <br />
               <span className="gradient-text">together.</span>
             </h2>
-            <p className="font-[family-name:var(--font-rubik)] text-[17px] leading-[1.6] text-[rgba(255,255,255,0.45)]">
+            <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.6] text-[rgba(255,255,255,0.45)]">
               Whether you&apos;re a research institution, conservation organization, or technology partner — we&apos;d love to hear from you.
             </p>
 
             <div className="flex flex-col gap-[8px] pt-[16px]">
               <div className="flex flex-col gap-[4px]">
-                <span className="font-[family-name:var(--font-rubik)] text-[12px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.25)]">General inquiries</span>
+                <span className="font-[family-name:var(--font-rubik)] text-[13px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.25)]">General inquiries</span>
                 <a href="mailto:info@finklab.eu" className="font-[family-name:var(--font-rubik)] text-[15px] text-[#85F18F] hover:text-white transition-colors">
                   info@finklab.eu
                 </a>
               </div>
               <div className="flex flex-col gap-[4px]">
-                <span className="font-[family-name:var(--font-rubik)] text-[12px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.25)]">Press</span>
+                <span className="font-[family-name:var(--font-rubik)] text-[13px] tracking-[0.1em] uppercase text-[rgba(255,255,255,0.25)]">Press</span>
                 <a href="mailto:press@finklab.eu" className="font-[family-name:var(--font-rubik)] text-[15px] text-[#85F18F] hover:text-white transition-colors">
                   press@finklab.eu
                 </a>
               </div>
               <div className="flex gap-[16px] pt-[8px]">
-                <a href="https://www.linkedin.com/company/finklab" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[14px] text-[rgba(255,255,255,0.4)] hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/company/finklab" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[13px] text-[rgba(255,255,255,0.4)] hover:text-white transition-colors">
                   LinkedIn
                 </a>
-                <a href="https://www.instagram.com/finkcommunity/" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[14px] text-[rgba(255,255,255,0.4)] hover:text-white transition-colors">
+                <a href="https://www.instagram.com/finkcommunity/" target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-rubik)] text-[13px] text-[rgba(255,255,255,0.4)] hover:text-white transition-colors">
                   Instagram
                 </a>
               </div>
@@ -172,7 +172,7 @@ export default function Contact() {
                 onBlur={() => setFocusedField(null)}
                 placeholder="Your message"
                 rows={4}
-                className={`w-full px-[20px] py-[16px] rounded-[24px] border-2 bg-transparent font-[family-name:var(--font-rubik)] text-[17px] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:outline-none transition-colors resize-none ${
+                className={`w-full px-[20px] py-[16px] rounded-[24px] border-2 bg-transparent font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] text-white placeholder:text-[rgba(255,255,255,0.3)] focus:outline-none transition-colors resize-none ${
                   focusedField === 'message'
                     ? 'border-[#00D4FF]'
                     : 'border-[rgba(255,255,255,0.1)]'
@@ -205,7 +205,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={!name.trim() || !email.trim() || !message.trim() || status === 'sending'}
-                className="w-full h-[56px] rounded-[16px] bg-[#85F18F] font-[family-name:var(--font-rubik)] font-medium text-[17px] text-[#101D2F] hover:bg-[#6de678] transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full h-[56px] rounded-[16px] bg-[#85F18F] font-[family-name:var(--font-rubik)] font-medium text-[15px] md:text-[17px] text-[#101D2F] hover:bg-[#6de678] transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 {status === 'sending' ? (
                   <span className="inline-flex items-center gap-[8px]">

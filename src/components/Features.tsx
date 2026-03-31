@@ -62,12 +62,12 @@ export default function Features() {
               />
 
               {/* Title */}
-              <h3 className="font-[family-name:var(--font-zain)] font-bold text-[24px] md:text-[28px] leading-[1.1em] text-white">
+              <h3 className="font-[family-name:var(--font-zain)] font-bold text-[22px] md:text-[28px] leading-[1.1em] text-white">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="font-[family-name:var(--font-rubik)] text-[15px] leading-[1.6] text-[rgba(255,255,255,0.45)]">
+              <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.6] text-[rgba(255,255,255,0.45)]">
                 {feature.description}
               </p>
             </div>

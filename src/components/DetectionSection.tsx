@@ -55,10 +55,10 @@ export default function DetectionSection() {
               <br />
               <span className="gradient-text">research dataset.</span>
             </h2>
-            <p className="font-[family-name:var(--font-rubik)] text-[17px] md:text-[18px] leading-[1.7] text-[rgba(255,255,255,0.45)]">
+            <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.7] text-[rgba(255,255,255,0.45)]">
               A rare bird appears. Someone discovers it. With fink, that moment doesn&apos;t disappear into a notebook or a chat history. It becomes a dot on the map. Then another. The bird world moves — in real-time.
             </p>
-            <p className="font-[family-name:var(--font-rubik)] text-[17px] md:text-[18px] leading-[1.7] text-[rgba(255,255,255,0.45)]">
+            <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.7] text-[rgba(255,255,255,0.45)]">
               Every observation passes through our validation pipeline — species detection, trust scoring, deduplication — before joining the living map. The result: clean, structured data that researchers can use without weeks of preprocessing.
             </p>
           </div>

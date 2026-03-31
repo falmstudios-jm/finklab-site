@@ -73,7 +73,7 @@ export default function AppShowcase() {
               </span>
             </div>
 
-            <p className="font-[family-name:var(--font-rubik)] text-[17px] md:text-[20px] leading-[1.6] text-[rgba(255,255,255,0.5)] max-w-[440px]">
+            <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[1.6] text-[rgba(255,255,255,0.5)] max-w-[440px]">
               Find birds. Share sightings. Explore the wild. The citizen science platform that turns every birdwatcher into a data contributor.
             </p>
 
@@ -86,7 +86,7 @@ export default function AppShowcase() {
               ].map((feature) => (
                 <div key={feature} className="flex items-start gap-[10px]">
                   <div className="w-[6px] h-[6px] rounded-full bg-[#85F18F] mt-[8px] shrink-0" />
-                  <span className="font-[family-name:var(--font-rubik)] text-[15px] leading-[22px] text-[rgba(255,255,255,0.45)]">
+                  <span className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] leading-[22px] md:leading-[24px] text-[rgba(255,255,255,0.45)]">
                     {feature}
                   </span>
                 </div>

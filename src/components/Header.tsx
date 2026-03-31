@@ -57,7 +57,7 @@ export default function Header() {
         {/* CTA */}
         <a
           href="#contact"
-          className="hidden md:flex items-center h-[40px] px-[20px] rounded-[40px] bg-[#85F18F] font-[family-name:var(--font-rubik)] font-medium text-[14px] text-[#101D2F] hover:bg-[#6de678] transition-colors"
+          className="hidden md:flex items-center h-[40px] px-[20px] rounded-[40px] bg-[#85F18F] font-[family-name:var(--font-rubik)] font-medium text-[15px] text-[#101D2F] hover:bg-[#6de678] transition-colors"
         >
           Get in touch
         </a>

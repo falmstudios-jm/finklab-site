@@ -101,10 +101,10 @@ function MobileCarousel() {
             </div>
 
             <div className="flex flex-col gap-4 items-center">
-              <h2 className="font-[family-name:var(--font-zain)] text-[32px] font-bold leading-[1em] tracking-[-0.4px] text-white text-center">
+              <h2 className="font-[family-name:var(--font-zain)] text-[36px] font-bold leading-[1em] tracking-[-0.4px] text-white text-center">
                 {slide.title}
               </h2>
-              <p className="font-[family-name:var(--font-rubik)] text-[17px] text-[rgba(255,255,255,0.5)] leading-relaxed text-center max-w-[340px]">
+              <p className="font-[family-name:var(--font-rubik)] text-[15px] text-[rgba(255,255,255,0.5)] leading-relaxed text-center max-w-[340px]">
                 {slide.body}
               </p>
             </div>
@@ -275,10 +275,10 @@ function DesktopSlideshow() {
 
               {/* Text */}
               <div className="flex flex-col gap-5 max-w-[480px]">
-                <h2 className="font-[family-name:var(--font-zain)] text-[40px] md:text-[56px] font-bold leading-[1em] tracking-[-0.4px] text-white">
+                <h2 className="font-[family-name:var(--font-zain)] text-[36px] md:text-[56px] font-bold leading-[1em] tracking-[-0.4px] text-white">
                   {slide.title}
                 </h2>
-                <p className="font-[family-name:var(--font-rubik)] text-[17px] md:text-[20px] text-[rgba(255,255,255,0.5)] leading-relaxed">
+                <p className="font-[family-name:var(--font-rubik)] text-[15px] md:text-[17px] text-[rgba(255,255,255,0.5)] leading-relaxed">
                   {slide.body}
                 </p>
               </div>
